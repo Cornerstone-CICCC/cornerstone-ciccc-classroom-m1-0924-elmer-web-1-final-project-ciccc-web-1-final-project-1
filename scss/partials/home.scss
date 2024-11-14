@@ -1,0 +1,200 @@
+@use 'variables.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: variables.$primary-color;
+}
+
+//Menu
+nav.container-fluid {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-color: variables.$primary-color;
+
+    menu {
+        background-color: variables.$primary-color;
+        padding: 0 15px;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 32px 0;
+        gap: 50px;
+        justify-content: center;
+        width: 100%;
+
+        li.nav-item {
+            font-family: variables.$primary-font;
+            font-weight: 400;
+            font-size: 20px;
+            color: variables.$li-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            #menu-line {
+                color: variables.$menu-line;
+                padding-left: 40px;
+            }
+        }
+    }
+}
+
+//Header
+header.container-fluid {
+    img.img-fluid {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 80px;
+        background-color: variables.$primary-color;
+    }
+
+    .main-title{
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        color: black; 
+        font-size: 24px; 
+        font-weight: bold; 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .main-p {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    button.consultation-btn {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: transparent;
+        font-size: 20px;
+        border: none;
+    }
+
+    .social-media-box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        transform: translate(-100%, -100%);
+        background-color: transparent;
+        font-size: 41px;
+        border: none;
+        top: 125%;
+        left: 97%;
+        ul {
+            list-style: none;
+            text-align: right;
+            li {
+                a {
+                    padding: 1rem;
+                    color: variables.$li-color;
+                    width: 41px;
+                    height: 41px;
+                }
+            }
+        }
+    }
+}
+
+//Main
+    main {
+        section.container-fluid {
+                img.img-fluid {
+                    width: 100%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+        }
+
+        section.container-fluid {
+            .testimonials {
+                background-color: variables.$testimonial-bk-color;
+                img.img-fluid {
+                    width: 50%;
+                    padding-top: 100px;
+                }
+
+                button.testimonials-btn {
+                    position: relative;
+                    top: 50px;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: transparent;
+                    font-size: 20px;
+                    border: none;
+                }
+
+                img#photos {
+                    width: 100%;
+                }
+
+                #carousel {
+                    padding-top: 50px;
+
+                    .carousel-indicators {
+                        button {
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+//Queries
+// For mobile devices 
+@media (max-width: 768px) { 
+    nav.container-fluid { 
+        flex-direction: column; 
+    } 
+    nav.container-fluid ul { 
+        flex-direction: column; // Stack items vertically 
+        align-items: center; // Center items horizontally 
+        gap: 20px; // Reduce gap between items 
+        } 
+        nav.container-fluid li { 
+            font-size: 18px; // Adjust font size 
+            line-height: 28px; // Adjust line height
+        }
+    }
+
+// For smaller Mobile Devices 
+@media (max-width: 480px) {
+     nav.container-fluid ul {
+         gap: 10px; // Further reduce gap between items 
+         } 
+         nav.container-fluid li { 
+            font-size: 16px; // Further adjust font size 
+            line-height: 24px; // Further adjust line height 
+            } 
+        }
+
+// For laptops 
+@media (max-width: 1200px) { 
+    // 
+    }
